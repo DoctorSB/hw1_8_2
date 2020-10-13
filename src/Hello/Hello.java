@@ -2,23 +2,15 @@ package Hello;
 
 import java.util.Scanner;
 
-class Hello{
-    static Scanner in = new Scanner(System.in);
-
-    public static void main (String[] args){
-        int x = in.nextInt(), a = in.nextInt(), i=0;
-        long c=0;
-
-        if(a>=0){
-            while(i!=a){
-                c+=x;
-                i++;}
-        }else{
-            while(i!=x&i!=-x){
-                c+=a;
-                i++;}
+class Hello {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N, sum = 0;
+            N = scanner.nextInt();
+        while (N % 2 != 1 || N <= 25 || N >= 100);
+        for (int i = 25; i < N; i++) {
+            if (i % 2 == 0) sum += i;
         }
-
-        System.out.println(c);
+        System.out.print(sum);
     }
 }
